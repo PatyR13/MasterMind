@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class MasterMind {
     public static void main(String[] args) {
-        System.out.println("Witaj w grze MasterMind!");
-        System.out.println("Zgadnij 4 cyfrowy kod składający się z liczb od 1 do 6.");
+        Konsola konsola = new Konsola();
+
+        konsola.przywitanieGraczaIZasady();
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -69,8 +70,8 @@ public class MasterMind {
                 System.out.println("Gratulacje! Odgadłeś kod!");
                 guessed = true;
             } else {
-                System.out.println("Poprawne cyfry na poprawnej pozycji: " + identicalAndInPlace);
-                System.out.println("Poprawne cyfry na niepoprawnych pozycjach: " + identicalButNotInPlace);
+                System.out.println("Ilość poprawnych cyfr na poprawnej pozycji: " + identicalAndInPlace);
+                System.out.println("Ilość poprawnych cyfr na niepoprawnej pozycji: " + identicalButNotInPlace);
             }
         }
 
